@@ -1,4 +1,4 @@
-FROM Python:3.8-alpine
+FROM python:3.7-alpine
 MAINTAINER Sinci App Developer
 
 ENV OYTHONUNBUFFERED 1
@@ -6,7 +6,7 @@ ENV OYTHONUNBUFFERED 1
 COPY ./requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
 
-RUN MKDIR /app
+RUN mkdir /app
 WORKDIR /app
 COPY ./app /app
 
